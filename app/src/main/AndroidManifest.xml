@@ -19,6 +19,7 @@
             android:name="categories.LandmarksCategory"
             android:label="Landmarks"
             android:parentActivityName=".MainActivity">
+
             <!-- Parent activity meta-data to support 4.0 and lower -->
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -28,10 +29,21 @@
             android:name="categorydetails.LandmarkDetails"
             android:label="Landmark Details"
             android:parentActivityName="categories.LandmarksCategory">
+
             <!-- Parent activity meta-data to support 4.0 and lower -->
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="categories.LandmarksCategory" />
+        </activity>
+        <activity
+            android:name=".ImageFullScrenActivity"
+            android:parentActivityName="categorydetails.LandmarkDetails">
+
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="categorydetails.LandmarkDetails" />
+
         </activity>
     </application>
 

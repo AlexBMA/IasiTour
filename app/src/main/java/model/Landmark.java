@@ -1,6 +1,8 @@
 package model;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by Alexandru on 1/24/2017.
@@ -15,10 +17,11 @@ public class Landmark implements Serializable {
     private String telephone;
     private String website;
     private String text;
+    private List<Integer> imgList;
+    private List<Integer> imgListSmall;
 
 
-    public Landmark()
-    {
+    public Landmark() {
 
     }
 
@@ -34,15 +37,15 @@ public class Landmark implements Serializable {
 
     /**
      * Creates a landmark object that has only name, address, admission, timetable and a description
-     * @param name name of landmark
-     * @param address address of landmark
+     *
+     * @param name      name of landmark
+     * @param address   address of landmark
      * @param admission admission of landmark
-     * @param open timetable
-     * @param text description of landmark
+     * @param open      timetable
+     * @param text      description of landmark
      */
 
-    public void makeBasicLandmark(String name, String address, String admission, String open, String text)
-    {
+    public void makeBasicLandmark(String name, String address, String admission, String open, String text) {
         this.name = name;
         this.address = address;
         this.open = open;
@@ -50,6 +53,8 @@ public class Landmark implements Serializable {
         this.text = text;
         this.telephone = "";
         this.website = "";
+        this.imgList = new ArrayList<>();
+        this.imgListSmall = new ArrayList<>();
     }
 
 
@@ -107,5 +112,21 @@ public class Landmark implements Serializable {
 
     public void setWebsite(String website) {
         this.website = website;
+    }
+
+    public List<Integer> getImgList() {
+        return imgList;
+    }
+
+    public void setImgList(List<Integer> imgList) {
+        this.imgList = imgList;
+    }
+
+    public List<Integer> getImgListSmall() {
+        return imgListSmall;
+    }
+
+    public void setImgListSmall(List<Integer> imgListSmall) {
+        this.imgListSmall = imgListSmall;
     }
 }

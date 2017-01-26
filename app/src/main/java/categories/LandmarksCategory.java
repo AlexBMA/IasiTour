@@ -128,6 +128,25 @@ public class LandmarksCategory extends AppCompatActivity {
                         "        the Moldavian History Museum, the Ethnographic Museum, the Museum of Art and the Museum of Science and Technology.\n" +
                         "        The interior décor, with the lavish furnishings and magnificent staircase of the entrance lobby,\n" +
                         "        can be admired free of charge, but tickets are required for entry to the museums.");
+
+        List<Integer> idImgSmall = new ArrayList<>();
+
+        idImgSmall.add(R.drawable.palat_img_small_1);
+        idImgSmall.add(R.drawable.palat_img_small_1);
+        idImgSmall.add(R.drawable.palat_img_small_3);
+        idImgSmall.add(R.drawable.palat_img_small_4);
+
+        List<Integer> idImg = new ArrayList<>();
+
+        idImg.add(R.drawable.palat_img_1);
+        idImg.add(R.drawable.palat_img_2);
+        idImg.add(R.drawable.palat_img_3);
+        idImg.add(R.drawable.palat_img_4);
+
+
+        theLandmark.setImgList(idImg);
+        theLandmark.setImgListSmall(idImgSmall);
+
         listLandmark.add(theLandmark);
         theLandmark = new Landmark();
         theLandmark.makeBasicLandmark("St. Paraschiva Metropolitan Cathedral",
