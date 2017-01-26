@@ -5,10 +5,15 @@ import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.content.Intent;
 import android.content.res.Configuration;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
+
+import categories.LandmarksCategory;
+import categories.MuseumCategory;
+import fragments.Fragment_landscape;
+import fragments.Fragment_portrait;
 
 public class MainActivity extends AppCompatActivity {
 

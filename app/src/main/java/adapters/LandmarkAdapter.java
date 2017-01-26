@@ -1,18 +1,17 @@
-package com.example.alexandru.iasitour;
+package adapters;
 
 import android.content.Context;
-import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
-import java.util.List;
+import com.example.alexandru.iasitour.Landmark;
+import com.example.alexandru.iasitour.R;
 
-import static android.R.attr.start;
+import java.util.List;
 
 /**
  * Created by Alexandru on 1/26/2017.

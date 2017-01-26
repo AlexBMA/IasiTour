@@ -3,47 +3,56 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingLeft="8dp"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:paddingLeft="8dp">
 
     <TextView
         android:id="@+id/landmarks_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:paddingBottom="8dp"
+        android:paddingTop="8dp"
         android:textSize="24sp"
         android:textStyle="bold"
-        tools:text="Name of the landmark"
-        android:gravity="center_horizontal"
-        android:paddingTop="8dp"
-        android:paddingBottom="8dp"
-        />
+        tools:text="Name of the landmark" />
+
     <TextView
         android:id="@+id/landmarks_address"
-        android:textSize="16sp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:text="address"
         android:paddingBottom="8dp"
+        android:textSize="16sp"
+        tools:text="address"
 
         />
+
     <TextView
         android:id="@+id/landmarks_admission"
-        android:textSize="16sp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:text="Admission"
         android:paddingBottom="8dp"
-        />
+        android:textSize="16sp"
+        tools:text="Admission" />
 
     <TextView
         android:id="@+id/landmarks_text"
-        android:textSize="16sp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:text="Description of the landmark"
         android:paddingBottom="8dp"
-        />
+        android:textSize="16sp"
+        tools:text="Description of the landmark" />
 
+    <GridView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:horizontalSpacing="10dp"
+        android:numColumns="auto_fit"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="10dp">
+
+    </GridView>
 
 
 </LinearLayout>

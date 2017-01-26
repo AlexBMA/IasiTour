@@ -1,14 +1,12 @@
-package com.example.alexandru.iasitour;
+package categorydetails;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
+import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
 
-import org.w3c.dom.Text;
-
-import static android.icu.lang.UCharacter.GraphemeClusterBreak.L;
+import com.example.alexandru.iasitour.Landmark;
+import com.example.alexandru.iasitour.R;
 
 public class LandmarkDetails extends AppCompatActivity {
 
@@ -21,12 +19,12 @@ public class LandmarkDetails extends AppCompatActivity {
         Intent i = getIntent();
         Landmark tempLandmark = (Landmark) i.getSerializableExtra("all_Infomation");
 
-        showInfomation(tempLandmark);
+        showInformation(tempLandmark);
 
 
     }
 
-    private void showInfomation(Landmark theLandmark) {
+    private void showInformation(Landmark theLandmark) {
         // get the text view by id
         TextView textViewName = (TextView) findViewById(R.id.landmarks_name);
         //set the text view
@@ -35,11 +33,11 @@ public class LandmarkDetails extends AppCompatActivity {
         // get the text view by id
         TextView textViewAddress = (TextView) findViewById(R.id.landmarks_address);
         //set the text view
-        textViewAddress.setText(getString(R.string.address)+" "+theLandmark.getAddress());
+        textViewAddress.setText(getString(R.string.address) + " " + theLandmark.getAddress());
 
         // get the text view by id
         TextView textViewAdmission = (TextView) findViewById(R.id.landmarks_admission);
-        textViewAdmission.setText(getString(R.string.open)+" "+theLandmark.getAdmission());
+        textViewAdmission.setText(getString(R.string.open) + " " + theLandmark.getAdmission());
 
         //get the text view by id
         TextView textViewInformation = (TextView) findViewById(R.id.landmarks_text);

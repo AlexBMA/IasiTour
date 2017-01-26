@@ -8,12 +8,12 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.alexandru.iasitour.LandmarksCategory">
+    tools:context="com.example.alexandru.iasitour.categories.LandmarksCategory">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="16sp"
-        android:text="This remarkable construction (1906-1925), built in flamboyant neogothic style, stands partly on the ruins of a medieval royal court mentioned in documents dating from 1434. Today, the 365-room palace houses the Gheorghe Asachi Library and four of the city's museums: the Moldavian History Museum, the Ethnographic Museum, the Museum of Art and the Museum of Science and Technology (see museum details). The interior décor, with the lavish furnishings and magnificent staircase of the entrance lobby, can be admired free of charge, but tickets are required for entry to the museums."/>
+        android:text="This remarkable construction (1906-1925), built in flamboyant neogothic style, stands partly on the ruins of a medieval royal court mentioned in documents dating from 1434. Today, the 365-room palace houses the Gheorghe Asachi Library and four of the city's museums: the Moldavian History Museum, the Ethnographic Museum, the Museum of Art and the Museum of Science and Technology (see museum details). The interior décor, with the lavish furnishings and magnificent staircase of the entrance lobby, can be admired free of charge, but tickets are required for entry to the museums."
+        android:textSize="16sp" />
 
 </RelativeLayout>

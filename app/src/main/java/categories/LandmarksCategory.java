@@ -1,16 +1,20 @@
-package com.example.alexandru.iasitour;
+package categories;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
+import com.example.alexandru.iasitour.Landmark;
+import com.example.alexandru.iasitour.R;
+
 import java.util.ArrayList;
 import java.util.List;
 
-import static java.security.AccessController.getContext;
+import adapters.LandmarkAdapter;
+import categorydetails.LandmarkDetails;
 
 
 /*

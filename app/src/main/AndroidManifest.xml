@@ -15,8 +15,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".LandmarksCategory" />
-        <activity android:name=".LandmarkDetails"></activity>
+        <activity android:name="categories.LandmarksCategory" />
+        <activity android:name="categorydetails.LandmarkDetails"></activity>
     </application>
 
 </manifest>

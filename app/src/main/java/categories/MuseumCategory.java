@@ -1,7 +1,9 @@
-package com.example.alexandru.iasitour;
+package categories;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+
+import com.example.alexandru.iasitour.R;
 
 /**
  * Created by Alexandru on 1/25/2017.
