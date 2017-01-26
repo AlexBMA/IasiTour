@@ -6,5 +6,6 @@
     <string name="in_landscape_fragment">In landscape fragment</string>
     <string name="in_portrait_fragment">In portrait fragment</string>
 
-
+    <string name="address">Address</string>
+    <string name="open">Open:</string>
 </resources>

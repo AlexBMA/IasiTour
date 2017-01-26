@@ -26,24 +26,23 @@ public class LandmarkDetails extends AppCompatActivity {
 
     }
 
-    private void showInfomation(Landmark theLandmark)
-    {
+    private void showInfomation(Landmark theLandmark) {
         // get the text view by id
         TextView textViewName = (TextView) findViewById(R.id.landmarks_name);
         //set the text view
         textViewName.setText(theLandmark.getName());
 
         // get the text view by id
-        TextView textViewAddress = (TextView)findViewById(R.id.landmarks_address);
+        TextView textViewAddress = (TextView) findViewById(R.id.landmarks_address);
         //set the text view
-        textViewAddress.setText(theLandmark.getAddress());
+        textViewAddress.setText(getString(R.string.address)+" "+theLandmark.getAddress());
 
         // get the text view by id
-        TextView textViewAdmission = (TextView)findViewById(R.id.landmarks_admission);
-        textViewAdmission.setText(theLandmark.getAdmission());
+        TextView textViewAdmission = (TextView) findViewById(R.id.landmarks_admission);
+        textViewAdmission.setText(getString(R.string.open)+" "+theLandmark.getAdmission());
 
         //get the text view by id
-        TextView textViewInformation = (TextView)findViewById(R.id.landmarks_text);
+        TextView textViewInformation = (TextView) findViewById(R.id.landmarks_text);
         textViewInformation.setText(theLandmark.getText());
 
     }

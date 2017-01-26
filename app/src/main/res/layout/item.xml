@@ -5,6 +5,7 @@
     android:layout_height="match_parent">
 
     <LinearLayout
+        android:paddingLeft="8dp"
         android:id="@+id/text_container"
         android:layout_width="match_parent"
         android:layout_height="@dimen/item_height"
