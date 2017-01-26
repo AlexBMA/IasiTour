@@ -1,10 +1,12 @@
 package com.example.alexandru.iasitour;
 
+import java.io.Serializable;
+
 /**
  * Created by Alexandru on 1/24/2017.
  */
 
-public class Landmark {
+public class Landmark implements Serializable {
 
     private String name;
     private String address;

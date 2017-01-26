@@ -1,11 +1,16 @@
 package com.example.alexandru.iasitour;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import static java.security.AccessController.getContext;
 
 
 /*
@@ -77,12 +82,30 @@ public class LandmarksCategory extends AppCompatActivity {
 
     }
 
-    private void showInformation(List<Landmark> landmarkList) {
+    private void showInformation(final List<Landmark> landmarkList) {
 
 
         ListView listView = (ListView) findViewById(R.id.list);
 
-        LandmarkAdapter landmarkAdapter = new LandmarkAdapter(this,landmarkList);
+        LandmarkAdapter landmarkAdapter = new LandmarkAdapter(this, landmarkList);
+
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                                            @Override
+                                            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+                                                Intent detailsForLandmark = new Intent(LandmarksCategory.this, LandmarkDetails.class);
+
+                                                /* get the current landmark */
+                                                Landmark theLandmark = landmarkList.get(position);
+
+                                                detailsForLandmark.putExtra("all_Infomation",theLandmark);
+                                                startActivity(detailsForLandmark);
+
+                                            }
+                                        }
+
+        );
 
         listView.setAdapter(landmarkAdapter);
     }
