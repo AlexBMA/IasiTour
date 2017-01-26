@@ -3,10 +3,16 @@ package categorydetails;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.widget.GridView;
 import android.widget.TextView;
 
-import com.example.alexandru.iasitour.Landmark;
 import com.example.alexandru.iasitour.R;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import adapters.ImageAdapter;
+import model.Landmark;
 
 public class LandmarkDetails extends AppCompatActivity {
 
@@ -42,6 +48,21 @@ public class LandmarkDetails extends AppCompatActivity {
         //get the text view by id
         TextView textViewInformation = (TextView) findViewById(R.id.landmarks_text);
         textViewInformation.setText(theLandmark.getText());
+
+
+        List<Integer> idImg = new ArrayList<>();
+
+        idImg.add(R.drawable.palat_img_1);
+        idImg.add(R.drawable.palat_img_2);
+        idImg.add(R.drawable.palat_img_3);
+        idImg.add(R.drawable.palat_img_4);
+
+
+        ImageAdapter imageAdapter = new ImageAdapter(this, idImg);
+
+        GridView gridView = (GridView) findViewById(R.id.img_grid);
+
+        gridView.setAdapter(imageAdapter);
 
     }
 

@@ -7,7 +7,6 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
-import com.example.alexandru.iasitour.Landmark;
 import com.example.alexandru.iasitour.R;
 
 import java.util.ArrayList;
@@ -15,6 +14,7 @@ import java.util.List;
 
 import adapters.LandmarkAdapter;
 import categorydetails.LandmarkDetails;
+import model.Landmark;
 
 
 /*

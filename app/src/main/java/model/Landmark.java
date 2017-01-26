@@ -1,4 +1,4 @@
-package com.example.alexandru.iasitour;
+package model;
 
 import java.io.Serializable;
 

@@ -8,10 +8,11 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
-import com.example.alexandru.iasitour.Landmark;
 import com.example.alexandru.iasitour.R;
 
 import java.util.List;
+
+import model.Landmark;
 
 /**
  * Created by Alexandru on 1/26/2017.
