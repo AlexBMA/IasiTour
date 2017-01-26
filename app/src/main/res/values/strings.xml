@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">IasiTour</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="in_landscape_fragment">In landscape fragment</string>
+    <string name="in_portrait_fragment">In portrait fragment</string>
+
+
+
+
+
+
+</resources>

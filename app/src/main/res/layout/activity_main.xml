@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <fragment
+        android:id="@+id/landscape_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <fragment
+        android:id="@+id/portrait_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+</FrameLayout
+-->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="8dp"
+        tools:context="com.example.alexandru.iasitour.MainActivity">
+
+        <TextView
+            android:id="@+id/landmarks"
+            style="@style/basic_style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="16dp"
+            android:paddingLeft="8dp"
+            android:text="Landmarks" />
+
+        <TextView
+            android:id="@+id/museums"
+            style="@style/basic_style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="16dp"
+            android:paddingLeft="8dp"
+            android:text="Museums" />
+
+        <TextView
+            android:id="@+id/park_gardens"
+            style="@style/basic_style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="16dp"
+            android:paddingLeft="8dp"
+            android:text="Park Gardens" />
+
+        <TextView
+            android:id="@+id/fast_facts"
+            style="@style/basic_style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="16dp"
+            android:paddingLeft="8dp"
+            android:text="Fast Facts" />
+
+
+    </LinearLayout>
+</ScrollView>
