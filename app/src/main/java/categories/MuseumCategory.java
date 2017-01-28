@@ -14,6 +14,7 @@ import java.util.List;
 
 import adapters.LandmarkAdapter;
 import categorydetails.LandmarkDetails;
+import databasepack.DB;
 import model.Landmark;
 
 /**
@@ -92,7 +93,7 @@ public class MuseumCategory extends AppCompatActivity {
 
         List<Landmark> listLandmark = new ArrayList<>();
 
-        listLandmark = createInformation(listLandmark);
+        listLandmark = DB.createInformation(2);
 
         showInformation(listLandmark);
 
@@ -126,41 +127,6 @@ public class MuseumCategory extends AppCompatActivity {
         listView.setAdapter(landmarkAdapter);
     }
 
-    private List<Landmark> createInformation(List<Landmark> listLandmark) {
 
-
-        Landmark theLandmark = new Landmark();
-        theLandmark.makeBasicLandmark("Art Museum",
-                "Piata Stefan cel Mare si Sfant 1(housed in the Palace of Culture)",
-                "Tue. - Sun. 10:00am - 5:00pm; closed on Mon",
-                "Admission charge",
-                "The Moldavian Ethnographic Museum is one of the oldest and largest in the country.\n" +
-                        "        Encompassing 16 rooms, the displays cover every aspect of traditional Moldavian life,\n" +
-                        "        featuring agricultural and hunting tools, woodwork, traditional pottery,\n" +
-                        "        painted eggs and a good collection of textiles and dyed carpets embroidered with bird and plant motifs.\n" +
-                        "        One room exhibits winter customs items, including masks representing the bear,\n" +
-                        "        the goat and other characters of traditional New Year's festivities.\n" +
-                        "        The collection of wooden machinery is impressive with 19th century tree-size oil and wine presses.");
-
-        listLandmark.add(theLandmark);
-
-        theLandmark = new Landmark();
-        theLandmark.makeBasicLandmark("Moldavian Ethnographic Museum",
-                "Piata Stefan cel Mare si Sfant 1(housed in the Palace of Culture)",
-                "Tue. - Sun. 10:00am - 5:00pm; closed on Mon",
-                "Admission charge",
-                "The art collection began with a set of oil paintings purchased at a Parisian auction in 1845.\n" +
-                        "        The official opening took place in 1860 at the Old University Palace and in 1955, the museum moved to its current location in the Palace of Culture.\n" +
-                        "        An excellent collection of Romanian paintings from the 19th and 20th centuries vividly illustrates Moldavian rural life and its landscape.\n" +
-                        "        Nicolae Grigorescu's Car cu Boi (Ox Cart),\n" +
-                        "        Theodor Amann's Hora de peste Olt (The Village Dance) and Octav Bancila's Batran Croitor (Old Jewish Tailor) are some of the collection's highlights.\n" +
-                        "        In the four rooms devoted to European art, there are paintings by Murillo, Philippe de Champaigne,\n" +
-                        "        Paolo Veronese and a Rubens, Cezar Receiving Pompey's Head. Additionally,\n" +
-                        "        you'll find works by foreign artists who lived and worked in Iasi such as Schiavonim Livaditii and Stavscki.\n" +
-                        "        The sculpture collection includes pieces by national artists such as Oscar Han, Cornel Medrea, Ion Jalea and Ion Irimescu.");
-
-
-        return listLandmark;
-    }
 
 }
