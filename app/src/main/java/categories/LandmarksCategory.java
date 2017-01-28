@@ -132,7 +132,7 @@ public class LandmarksCategory extends AppCompatActivity {
         List<Integer> idImgSmall = new ArrayList<>();
 
         idImgSmall.add(R.drawable.palat_img_small_1);
-        idImgSmall.add(R.drawable.palat_img_small_1);
+        idImgSmall.add(R.drawable.palat_img_small_2);
         idImgSmall.add(R.drawable.palat_img_small_3);
         idImgSmall.add(R.drawable.palat_img_small_4);
 

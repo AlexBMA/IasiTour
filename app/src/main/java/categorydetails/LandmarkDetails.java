@@ -8,7 +8,6 @@ import android.widget.AdapterView;
 import android.widget.GridView;
 import android.widget.TextView;
 
-import com.example.alexandru.iasitour.ImageFullScrenActivity;
 import com.example.alexandru.iasitour.R;
 
 import java.util.List;
@@ -19,6 +18,8 @@ import model.Landmark;
 public class LandmarkDetails extends AppCompatActivity {
 
 
+    Landmark localLandmark;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,8 +27,9 @@ public class LandmarkDetails extends AppCompatActivity {
 
         Intent i = getIntent();
         Landmark tempLandmark = (Landmark) i.getSerializableExtra("all_Infomation");
+        if (localLandmark == null) localLandmark = tempLandmark;
 
-        showInformation(tempLandmark);
+        showInformation(localLandmark);
 
 
     }
@@ -53,40 +55,34 @@ public class LandmarkDetails extends AppCompatActivity {
 
 
         List<Integer> idImgSmall = theLandmark.getImgListSmall();
+        if (idImgSmall.size() > 0) {
+            ImageAdapter imageAdapter = new ImageAdapter(this, idImgSmall);
 
-        idImgSmall.add(R.drawable.palat_img_small_1);
-        idImgSmall.add(R.drawable.palat_img_small_2);
-        idImgSmall.add(R.drawable.palat_img_small_3);
-        idImgSmall.add(R.drawable.palat_img_small_4);
-
-        List<Integer> idImag = theLandmark.getImgList();
-        idImag.add(R.drawable.palat_img_1);
-        idImag.add(R.drawable.palat_img_2);
-        idImag.add(R.drawable.palat_img_3);
-        idImag.add(R.drawable.palat_img_4);
+            GridView gridView = (GridView) findViewById(R.id.img_grid);
 
 
-        ImageAdapter imageAdapter = new ImageAdapter(this, idImgSmall);
+            gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                @Override
+                public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
-        GridView gridView = (GridView) findViewById(R.id.img_grid);
+                    //create teh intent
+                    Intent intent = new Intent(LandmarkDetails.this, ImageFullScreenActivity.class);
+                    //get the right img id
+                    int idImage = theLandmark.getImgList().get(position);
+                    // put the id in the intent
+                    intent.putExtra("all_Infomation", theLandmark);
+                    intent.putExtra("img_id", idImage);
+                    //start the intent
+                    startActivity(intent);
 
-        gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-
-                //create teh intent
-                Intent intent = new Intent(LandmarkDetails.this, ImageFullScrenActivity.class);
-                //get the right img id
-                int idImage = theLandmark.getImgList().get(position);
-                // put the id in the intent
-                intent.putExtra("idimg", idImage);
-                //start the intent
-                startActivity(intent);
-
-            }
-        });
-        //set the adapter for the grid view
-        gridView.setAdapter(imageAdapter);
+                }
+            });
+            //set the adapter for the grid view
+            gridView.setAdapter(imageAdapter);
+        } else {
+            GridView gridView = (GridView) findViewById(R.id.img_grid);
+            gridView.setVisibility(View.GONE);
+        }
 
     }
 

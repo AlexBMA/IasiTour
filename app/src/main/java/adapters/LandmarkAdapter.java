@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.alexandru.iasitour.R;
@@ -43,8 +44,6 @@ public class LandmarkAdapter extends ArrayAdapter<Landmark> {
 
 
 
-
-
         //get the current landmark
         Landmark theLandmark = getItem(position);
 
@@ -59,6 +58,14 @@ public class LandmarkAdapter extends ArrayAdapter<Landmark> {
 
         //set the text in the Text view
         textViewAddress.setText(theLandmark.getAddress());
+
+
+        if (theLandmark.getImgList().size() > 0) {
+            // get the image
+            ImageView imageView = (ImageView) listItemView.findViewById(R.id.img);
+            //set the img
+            imageView.setImageResource(theLandmark.getImgListSmall().get(0));
+        }
 
         return listItemView;
     }
