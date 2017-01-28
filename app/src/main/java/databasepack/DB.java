@@ -129,6 +129,32 @@ public class DB {
                         "        you'll find works by foreign artists who lived and worked in Iasi such as Schiavonim Livaditii and Stavscki.\n" +
                         "        The sculpture collection includes pieces by national artists such as Oscar Han, Cornel Medrea, Ion Jalea and Ion Irimescu.");
 
+        listLandmark.add(theLandmark);
+
+        theLandmark = new Landmark();
+        theLandmark.makeBasicLandmark("Moldavian History Museum",
+                "Piata Stefan cel Mare si Sfant 1(housed in the Palace of Culture)",
+                "Tue. - Sun. 10:00am - 5:00pm; closed on Mon",
+                "Admission charge",
+                "     Opened in 1955, this museum features some 35,000 objects spanning the centuries from 70,000 B.C. until 1946.\n" +
+                        "        These exhibits cover 19 rooms on the ground floor of the Palace of Culture. Some of the famous Cucuteni ceramics are on display here.\n" +
+                        "        The museum also houses the vaulted King's Room (Sala Voievozilor),\n" +
+                        "        a gallery of medallion-shaped portraits depicting Moldavian sovereigns from 81 A.D. to the Hohenzollern kings.");
+
+        listLandmark.add(theLandmark);
+
+        theLandmark = new Landmark();
+        theLandmark.makeBasicLandmark("Moldavian History Museum",
+                "Piata Stefan cel Mare si Sfant 1(housed in the Palace of Culture)",
+                "Tue. - Sun. 10:00am - 5:00pm; closed on Mon",
+                "Admission charge",
+                "      Radio, television, recording and broadcasting buffs will enjoy the exhibits displayed in this museum.\n" +
+                        "        The last section features a superb collection of musical instruments: unique Romanian music boxes,\n" +
+                        "        mechanical accordions and an automated orchestra with three violins and a piano.");
+
+        listLandmark.add(theLandmark);
+
+
 
         return listLandmark;
     }
